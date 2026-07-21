@@ -70,7 +70,7 @@
             cursor: pointer;
         }
 
-        .checkbox-label input[type="checkbox"], 
+        .checkbox-label input[type="checkbox"],
         .checkbox-label input[type="radio"] {
             width: 18px;
             height: 18px;
@@ -106,53 +106,47 @@
     <div class="row">
         <label>Código :</label>
         <select id="codigo">
-            <option value="I-151">I-151</option>
-            <option value="I-208">I-208</option>
-            <option value="I-326">I-326</option>
-            <option value="I-335">I-335</option>
-            <option value="I-111">I-111</option>
-            <option value="I-152">I-152</option>
-            <option value="I-256">I-256</option>
-            <option value="I-259">I-259</option>
-            <option value="I-265">I-265</option>
-            <option value="I-282">I-282</option>
-            <option value="I-336">I-336</option>
-            <option value="I-55">I-55</option>
-            <option value="I-332">I-332</option>
-            <option value="I-213">I-213</option>
-            <option value="I-321">I-321</option>
+            <option value="I - 151">I - 151</option>
+            <option value="I - 208">I - 208</option>
+            <option value="I - 326">I - 326</option>
+            <option value="I - 335">I - 335</option>
+            <option value="I - 111">I - 111</option>
+            <option value="I - 152">I - 152</option>
+            <option value="I - 256">I - 256</option>
+            <option value="I - 259">I - 259</option>
+            <option value="I - 265">I - 265</option>
+            <option value="I - 282">I - 282</option>
+            <option value="I - 336">I - 336</option>
+            <option value="I - 55">I - 55</option>
+            <option value="I - 332_LRojas" selected>I - 332_LRojas</option>
+            <option value="I - 213">I - 213</option>
+            <option value="I - 321">I - 321</option>
         </select>
 
-        <label>PPU :</label>
-        <input type="text" id="ppu1" placeholder="XXXX" maxlength="4" style="width: 60px; text-transform:uppercase;">
-        <span>*</span>
-        <input type="text" id="ppu2" placeholder="XX" maxlength="2" style="width: 40px; text-transform:uppercase;">
-    </div>
-
-    <!-- Tipo de Vehículo -->
-    <div class="section-title">Vehículo :</div>
-    <div class="row">
-        <label class="checkbox-label"><input type="radio" name="vehiculo" value="Auto" checked> Auto</label>
-        <label class="checkbox-label"><input type="radio" name="vehiculo" value="Moto"> Moto</label>
+        <label>Móvil :</label>
+        <input type="text" id="ppu1" placeholder="VWXC" maxlength="4" style="width: 60px; text-transform:uppercase;">
+        <span>-</span>
+        <input type="text" id="ppu2" placeholder="50" maxlength="2" style="width: 40px; text-transform:uppercase;">
     </div>
 
     <!-- Verificar Cargos -->
     <div class="section-title">Verificar Cargos</div>
     <div class="row">
-        <input type="text" id="conos" placeholder="XX" maxlength="2" style="width: 45px;">
-        <label>Conos</label>
+        <label>Conos :</label>
+        <input type="text" id="conos" placeholder="02" maxlength="2" style="width: 45px;">
     </div>
 
     <div class="grid-cargos">
-        <label class="checkbox-label"><input type="checkbox" id="chk_todos" onchange="toggleTodos(this)"> Todos</label>
+        <label class="checkbox-label" style="grid-column: span 2;"><input type="checkbox" id="chk_todos" onchange="toggleTodos(this)"> Marcar / Desmarcar Todos</label>
         <label class="checkbox-label"><input type="checkbox" class="cargo-item" value="Aseo"> Aseo</label>
-        <label class="checkbox-label"><input type="checkbox" class="cargo-item" value="Tarj. Combustible"> Tarj. Combustible</label>
-        <label class="checkbox-label"><input type="checkbox" class="cargo-item" value="Kit de Seguridad"> Kit de Seguridad</label>
-        <label class="checkbox-label"><input type="checkbox" class="cargo-item" value="Doc. Vehículo"> Doc. Vehículo</label>
-        <label class="checkbox-label"><input type="checkbox" class="cargo-item" value="Gata"> Gata</label>
-        <label class="checkbox-label"><input type="checkbox" class="cargo-item" value="Llave Rueda"> Llave Rueda</label>
-        <label class="checkbox-label"><input type="checkbox" class="cargo-item" value="Extintor"> Extintor</label>
-        <label class="checkbox-label"><input type="checkbox" class="cargo-item" value="Rueda Repuesto"> Rueda Repuesto</label>
+        <label class="checkbox-label"><input type="checkbox" class="cargo-item" value="Tarjeta de Combustible" checked> Tarjeta de Combustible</label>
+        <label class="checkbox-label"><input type="checkbox" class="cargo-item" value="Documentos Vehículo" checked> Documentos Vehículo</label>
+        <label class="checkbox-label"><input type="checkbox" class="cargo-item" value="Bitácora" checked> Bitácora</label>
+        <label class="checkbox-label"><input type="checkbox" class="cargo-item" value="Llave Rueda" checked> Llave Rueda</label>
+        <label class="checkbox-label"><input type="checkbox" class="cargo-item" value="Gata" checked> Gata</label>
+        <label class="checkbox-label"><input type="checkbox" class="cargo-item" value="Rueda Repuesto" checked> Rueda Repuesto</label>
+        <label class="checkbox-label"><input type="checkbox" class="cargo-item" value="Extintor" checked> Extintor</label>
+        <label class="checkbox-label"><input type="checkbox" class="cargo-item" value="Escudo"> Escudo</label>
     </div>
 
     <!-- Carga Combustible -->
@@ -162,67 +156,66 @@
         <label class="checkbox-label"><input type="radio" name="combustible" value="No"> No</label>
     </div>
 
-    <!-- Estado Estanque -->
-    <div class="row">
-        <label>Estado estanque :</label>
-        <select id="estanque">
-            <option value="100%">100 %</option>
-            <option value="90%">90 %</option>
-            <option value="80%">80 %</option>
-            <option value="70%">70 %</option>
-            <option value="50%">50 %</option>
-            <option value="30%">30 %</option>
-            <option value="20%">20 %</option>
-            <option value="10%">10 %</option>
-        </select>
-    </div>
-
-    <!-- Boucher -->
-    <div class="row">
-        <label>Boucher :</label>
-        <input type="text" id="boucher" placeholder="XXXX" maxlength="4" style="width: 70px;">
-        <span style="font-size: 12px; color: #aaa;">(Últimos 4 dígitos)</span>
-    </div>
-
-    <!-- Lugar con Flecha / Desplegable -->
-    <div class="row">
+    <!-- Lugar -->
+    <div class="row" style="margin-top: 15px;">
         <label>Lugar :</label>
         <select id="lugar" style="max-width: 250px;">
             <option value="No especificado">[Seleccione]</option>
-            <option value="(01) AVDA. COLON 7400">(01) AVDA. COLON 7400</option>
-            <option value="(02) AVDA. LAS CONDES 10.912">(02) AVDA. LAS CONDES 10.912</option>
-            <option value="(03) AVDA. LAS CONDES 8170">(03) AVDA. LAS CONDES 8170</option>
-            <option value="(04) AV LAS CONDES 12.145">(04) AV LAS CONDES 12.145</option>
-            <option value="(05) CALLE LOS POZOS 7180">(05) CALLE LOS POZOS 7180</option>
-            <option value="(06) CAMINO A FARELLONES 14380">(06) CAMINO A FARELLONES 14380</option>
-            <option value="(07) CAMINO EL ALBA 9610">(07) CAMINO EL ALBA 9610</option>
-            <option value="(09) CRISTOBAL COLON 4359">(09) CRISTOBAL COLON 4359</option>
-            <option value="(10) CRISTOBAL COLON 7026">(10) CRISTOBAL COLON 7026</option>
-            <option value="(11) ESTACIÓN DE SERVICIO DE OTRA COMUNA RM">(11) ESTACIÓN DE SERVICIO DE OTRA COMUNA RM</option>
-            <option value="(12) ESTACIÓN DE SERVICIO DE OTRAS REGIONES">(12) ESTACIÓN DE SERVICIO DE OTRAS REGIONES</option>
-            <option value="(13) GENERAL BLANCHE 11860">(13) GENERAL BLANCHE 11860</option>
-            <option value="(14) ISABEL LA CATOLICA 4020">(14) ISABEL LA CATOLICA 4020</option>
-            <option value="(15) LAS CONDES 8321">(15) LAS CONDES 8321</option>
-            <option value="(16) LOTA 2864">(16) LOTA 2864</option>
-            <option value="(17) MANQUEHUE NORTE 674 / PDTE.RIESCO">(17) MANQUEHUE NORTE 674 / PDTE.RIESCO</option>
-            <option value="(18) PATAGONIA 75">(18) PATAGONIA 75</option>
-            <option value="(19) SAN RAMON 2701, SAN CARLOS APOQUINDO">(19) SAN RAMON 2701, SAN CARLOS APOQUINDO</option>
-            <option value="(20) SANTA MARIA 2890">(20) SANTA MARIA 2890</option>
-            <option value="(21) TOMAS MORO 1945">(21) TOMAS MORO 1945</option>
+            <option value="01 - AVDA. COLON 7400">01 - AVDA. COLON 7400</option>
+            <option value="02 - AVDA. LAS CONDES 10.912">02 - AVDA. LAS CONDES 10.912</option>
+            <option value="03 - AVDA. LAS CONDES 8170">03 - AVDA. LAS CONDES 8170</option>
+            <option value="04 - AV LAS CONDES 12.145">04 - AV LAS CONDES 12.145</option>
+            <option value="05 - CALLE LOS POZOS 7180">05 - CALLE LOS POZOS 7180</option>
+            <option value="06 - CAMINO A FARELLONES 14380">06 - CAMINO A FARELLONES 14380</option>
+            <option value="07 - CAMINO EL ALBA 9610">07 - CAMINO EL ALBA 9610</option>
+            <option value="09 - CRISTOBAL COLON 4359">09 - CRISTOBAL COLON 4359</option>
+            <option value="10 - CRISTOBAL COLON 7026">10 - CRISTOBAL COLON 7026</option>
+            <option value="11 - ESTACIÓN DE SERVICIO DE OTRA COMUNA RM">11 - ESTACIÓN DE SERVICIO DE OTRA COMUNA RM</option>
+            <option value="12 - ESTACIÓN DE SERVICIO DE OTRAS REGIONES">12 - ESTACIÓN DE SERVICIO DE OTRAS REGIONES</option>
+            <option value="13 - GENERAL BLANCHE 11860">13 - GENERAL BLANCHE 11860</option>
+            <option value="14 - ISABEL LA CATOLICA 4020">14 - ISABEL LA CATOLICA 4020</option>
+            <option value="15 - LAS CONDES 8321">15 - LAS CONDES 8321</option>
+            <option value="16 - LOTA 2864">16 - LOTA 2864</option>
+            <option value="17 - MANQUEHUE NORTE 674 / PDTE.RIESCO">17 - MANQUEHUE NORTE 674 / PDTE.RIESCO</option>
+            <option value="18 - PATAGONIA 75" selected>18 - PATAGONIA 75</option>
+            <option value="19 - SAN RAMON 2701, SAN CARLOS APOQUINDO">19 - SAN RAMON 2701, SAN CARLOS APOQUINDO</option>
+            <option value="20 - SANTA MARIA 2890">20 - SANTA MARIA 2890</option>
+            <option value="21 - TOMAS MORO 1945">21 - TOMAS MORO 1945</option>
         </select>
     </div>
 
     <!-- Hora -->
     <div class="row">
         <label>Hora :</label>
-        <input type="text" id="hora1" placeholder="XX" maxlength="2" style="width: 40px;">
+        <input type="text" id="hora1" placeholder="17" maxlength="2" style="width: 40px;">
         <span>:</span>
-        <input type="text" id="hora2" placeholder="XX" maxlength="2" style="width: 40px;">
-        <span>Hrs.</span>
+        <input type="text" id="hora2" placeholder="14" maxlength="2" style="width: 40px;">
+        <span>hrs</span>
+    </div>
+
+    <!-- Boucher -->
+    <div class="row">
+        <label>Boucher :</label>
+        <input type="text" id="boucher" placeholder="2027" maxlength="6" style="width: 80px;">
+    </div>
+
+    <!-- Estado Estanque -->
+    <div class="row">
+        <label>Estanque :</label>
+        <select id="estanque">
+            <option value="100 %" selected>100 %</option>
+            <option value="90 %">90 %</option>
+            <option value="80 %">80 %</option>
+            <option value="70 %">70 %</option>
+            <option value="50 %">50 %</option>
+            <option value="30 %">30 %</option>
+            <option value="20 %">20 %</option>
+            <option value="10 %">10 %</option>
+        </select>
     </div>
 
     <!-- Novedades -->
-    <textarea id="novedades" rows="3" placeholder="Novedades Vehículo"></textarea>
+    <textarea id="novedades" rows="3" placeholder="Novedades Vehículo :"></textarea>
 
     <!-- Botón Enviar -->
     <button class="btn-whatsapp" onclick="enviarWhatsApp()">
@@ -240,44 +233,45 @@ function enviarWhatsApp() {
     const codigo = document.getElementById('codigo').value;
     const ppu1 = document.getElementById('ppu1').value.toUpperCase();
     const ppu2 = document.getElementById('ppu2').value.toUpperCase();
-    const ppu = (ppu1 && ppu2) ? `${ppu1}-${ppu2}` : 'Sin especificar';
-    
-    const vehiculo = document.querySelector('input[name="vehiculo"]:checked').value;
-    
-    // Cargos
-    const conos = document.getElementById('conos').value || '0';
-    const cargosSeleccionados = [];
-    document.querySelectorAll('.cargo-item:checked').forEach(cb => cargosSeleccionados.push(cb.value));
-    const listaCargos = cargosSeleccionados.length > 0 ? cargosSeleccionados.join(', ') : 'Ninguno';
+    const movil = (ppu1 && ppu2) ? `${ppu1}-${ppu2}` : '';
+    const conos = document.getElementById('conos').value || '00';
 
-    const combustible = document.querySelector('input[name="combustible"]:checked').value;
-    const estanque = document.getElementById('estanque').value;
-    const boucher = document.getElementById('boucher').value || 'N/A';
-    const lugar = document.getElementById('lugar').value;
+    // Procesar todos los cargos con ✅ o ❌
+    const cargosElementos = document.querySelectorAll('.cargo-item');
+    let listaCargosTexto = '';
     
+    cargosElementos.forEach((cb, idx) => {
+        const icono = cb.checked ? '✅' : '❌';
+        const comaOPunto = (idx === cargosElementos.length - 1) ? '.' : ',';
+        listaCargosTexto += `${icono} _${cb.value}_${comaOPunto}%0A`;
+    });
+
+    // Carga Combustible (Condicional)
+    const combustibleRadio = document.querySelector('input[name="combustible"]:checked').value;
+    const combustibleTexto = (combustibleRadio === "No") ? "NO SE CARGA COMBUSTIBLE" : "SI";
+
+    const lugar = document.getElementById('lugar').value;
     const h1 = document.getElementById('hora1').value;
     const h2 = document.getElementById('hora2').value;
-    const hora = (h1 && h2) ? `${h1}:${h2} Hrs.` : 'N/A';
+    const hora = (h1 && h2) ? `${h1} : ${h2} hrs` : '';
 
+    const boucher = document.getElementById('boucher').value || '';
+    const estanque = document.getElementById('estanque').value;
     const novedades = document.getElementById('novedades').value || "Sin novedades";
 
-    // Mensaje para WhatsApp
-    const mensaje = `*RECEPCIÓN DE VEHÍCULO*%0A` +
-                    `*Código:* ${codigo}%0A` +
-                    `*PPU:* ${ppu}%0A` +
-                    `*Vehículo:* ${vehiculo}%0A` +
-                    `----------------------------%0A` +
-                    `*VERIFICAR CARGOS*%0A` +
-                    `*Conos:* ${conos}%0A` +
-                    `*Items:* ${listaCargos}%0A` +
-                    `----------------------------%0A` +
-                    `*Combustible:* ${combustible}%0A` +
-                    `*Estanque:* ${estanque}%0A` +
-                    `*Boucher:* ${boucher}%0A` +
-                    `*Lugar:* ${lugar}%0A` +
-                    `*Hora:* ${hora}%0A` +
-                    `----------------------------%0A` +
-                    `*Novedades:* ${novedades}`;
+    // Formato exacto del mensaje
+    const mensaje = `_${codigo}_%0A` +
+                    `*Móvil :* _${movil}_%0A` +
+                    `*Conos :* _${conos}_%0A` +
+                    `*Cargos :*%0A` +
+                    `${listaCargosTexto}` +
+                    `*Combustible :* _${combustibleTexto}_%0A` +
+                    `*Lugar :* _${lugar}_%0A` +
+                    `*Hora :* _${hora}_%0A` +
+                    `*Boucher :* _${boucher}_%0A` +
+                    `*Estanque :* _${estanque}_%0A` +
+                    `*Novedades Vehículo :*%0A` +
+                    `_${novedades}_`;
 
     window.open(`https://api.whatsapp.com/send?text=${mensaje}`, '_blank');
 }
