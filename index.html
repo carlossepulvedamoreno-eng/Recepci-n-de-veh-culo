@@ -36,7 +36,7 @@
             flex-wrap: wrap;
         }
 
-        select, input[type="text"], input[type="number"], textarea {
+        select, input[type="text"], input[type="tel"], textarea {
             padding: 8px;
             border-radius: 5px;
             border: 1px solid #555;
@@ -124,16 +124,16 @@
         </select>
 
         <label>Móvil :</label>
-        <input type="text" id="ppu1" maxlength="4" style="width: 60px; text-transform:uppercase;">
+        <input type="text" id="ppu1" maxlength="4" style="width: 60px; text-transform:uppercase;" oninput="autoAvanzarPpu(this)">
         <span>-</span>
-        <input type="text" id="ppu2" maxlength="2" style="width: 40px; text-transform:uppercase;">
+        <input type="tel" inputmode="numeric" id="ppu2" maxlength="2" style="width: 40px; text-transform:uppercase;">
     </div>
 
     <!-- Verificar Cargos -->
     <div class="section-title">Verificar Cargos</div>
     <div class="row">
         <label>Conos :</label>
-        <input type="text" id="conos" maxlength="2" style="width: 45px;">
+        <input type="tel" inputmode="numeric" id="conos" maxlength="2" style="width: 45px;">
     </div>
 
     <div class="grid-cargos">
@@ -181,16 +181,16 @@
     <!-- Hora -->
     <div class="row">
         <label>Hora :</label>
-        <input type="text" id="hora1" maxlength="2" style="width: 40px;">
+        <input type="tel" inputmode="numeric" id="hora1" maxlength="2" style="width: 40px;">
         <span>:</span>
-        <input type="text" id="hora2" maxlength="2" style="width: 40px;">
+        <input type="tel" inputmode="numeric" id="hora2" maxlength="2" style="width: 40px;">
         <span>hrs</span>
     </div>
 
     <!-- Boucher -->
     <div class="row">
         <label>Boucher :</label>
-        <input type="text" id="boucher" maxlength="6" style="width: 80px;">
+        <input type="tel" inputmode="numeric" id="boucher" maxlength="6" style="width: 80px;">
     </div>
 
     <!-- Estado Estanque -->
@@ -218,6 +218,12 @@
 </div>
 
 <script>
+function autoAvanzarPpu(elemento) {
+    if (elemento.value.length >= 4) {
+        document.getElementById('ppu2').focus();
+    }
+}
+
 function toggleTodos(master) {
     const checkboxes = document.querySelectorAll('.cargo-item');
     checkboxes.forEach(cb => cb.checked = master.checked);
