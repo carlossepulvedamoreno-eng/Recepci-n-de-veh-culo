@@ -102,7 +102,7 @@
     <p>Formulario para el envío de datos</p>
     <a href="#" class="error-link">Reportar error en la app</a>
 
-    <!-- Código Inspector y PPU -->
+    <!-- Código Inspector y PPU / Móvil -->
     <div class="row">
         <label>Código :</label>
         <select id="codigo">
@@ -124,28 +124,28 @@
         </select>
 
         <label>Móvil :</label>
-        <input type="text" id="ppu1" placeholder="VWGB" maxlength="4" style="width: 60px; text-transform:uppercase;">
+        <input type="text" id="ppu1" maxlength="4" style="width: 60px; text-transform:uppercase;">
         <span>-</span>
-        <input type="text" id="ppu2" placeholder="86" maxlength="2" style="width: 40px; text-transform:uppercase;">
+        <input type="text" id="ppu2" maxlength="2" style="width: 40px; text-transform:uppercase;">
     </div>
 
     <!-- Verificar Cargos -->
     <div class="section-title">Verificar Cargos</div>
     <div class="row">
         <label>Conos :</label>
-        <input type="text" id="conos" placeholder="02" maxlength="2" style="width: 45px;">
+        <input type="text" id="conos" maxlength="2" style="width: 45px;">
     </div>
 
     <div class="grid-cargos">
         <label class="checkbox-label" style="grid-column: span 2;"><input type="checkbox" id="chk_todos" onchange="toggleTodos(this)"> Marcar / Desmarcar Todos</label>
         <label class="checkbox-label"><input type="checkbox" class="cargo-item" value="Aseo"> Aseo</label>
-        <label class="checkbox-label"><input type="checkbox" class="cargo-item" value="Tarjeta de Combustible" checked> Tarjeta de Combustible</label>
-        <label class="checkbox-label"><input type="checkbox" class="cargo-item" value="Documentos Vehículo" checked> Documentos Vehículo</label>
-        <label class="checkbox-label"><input type="checkbox" class="cargo-item" value="Kit de Seguridad" checked> Kit de Seguridad</label>
-        <label class="checkbox-label"><input type="checkbox" class="cargo-item" value="Llave Rueda" checked> Llave Rueda</label>
-        <label class="checkbox-label"><input type="checkbox" class="cargo-item" value="Gata" checked> Gata</label>
-        <label class="checkbox-label"><input type="checkbox" class="cargo-item" value="Rueda Repuesto" checked> Rueda Repuesto</label>
-        <label class="checkbox-label"><input type="checkbox" class="cargo-item" value="Extintor" checked> Extintor</label>
+        <label class="checkbox-label"><input type="checkbox" class="cargo-item" value="Tarjeta de Combustible"> Tarjeta de Combustible</label>
+        <label class="checkbox-label"><input type="checkbox" class="cargo-item" value="Documentos Vehículo"> Documentos Vehículo</label>
+        <label class="checkbox-label"><input type="checkbox" class="cargo-item" value="Kit de Seguridad"> Kit de Seguridad</label>
+        <label class="checkbox-label"><input type="checkbox" class="cargo-item" value="Llave Rueda"> Llave Rueda</label>
+        <label class="checkbox-label"><input type="checkbox" class="cargo-item" value="Gata"> Gata</label>
+        <label class="checkbox-label"><input type="checkbox" class="cargo-item" value="Rueda Repuesto"> Rueda Repuesto</label>
+        <label class="checkbox-label"><input type="checkbox" class="cargo-item" value="Extintor"> Extintor</label>
         <label class="checkbox-label"><input type="checkbox" class="cargo-item" value="Bitácora Virtual"> Bitácora Virtual</label>
     </div>
 
@@ -181,16 +181,16 @@
     <!-- Hora -->
     <div class="row">
         <label>Hora :</label>
-        <input type="text" id="hora1" placeholder="17" maxlength="2" style="width: 40px;">
+        <input type="text" id="hora1" maxlength="2" style="width: 40px;">
         <span>:</span>
-        <input type="text" id="hora2" placeholder="14" maxlength="2" style="width: 40px;">
+        <input type="text" id="hora2" maxlength="2" style="width: 40px;">
         <span>hrs</span>
     </div>
 
     <!-- Boucher -->
     <div class="row">
         <label>Boucher :</label>
-        <input type="text" id="boucher" placeholder="2027" maxlength="6" style="width: 80px;">
+        <input type="text" id="boucher" maxlength="6" style="width: 80px;">
     </div>
 
     <!-- Estado Estanque -->
@@ -230,8 +230,8 @@ function enviarWhatsApp() {
 
     const ppu1 = document.getElementById('ppu1').value.toUpperCase();
     const ppu2 = document.getElementById('ppu2').value.toUpperCase();
-    const movil = (ppu1 && ppu2) ? `${ppu1}-${ppu2}` : '';
-    const conos = document.getElementById('conos').value || '00';
+    const movil = (ppu1 && ppu2) ? `${ppu1}-${ppu2}` : `${ppu1}${ppu2}`;
+    const conos = document.getElementById('conos').value || '';
 
     // Procesar todos los cargos con ✅ o ❌
     const cargosElementos = document.querySelectorAll('.cargo-item');
