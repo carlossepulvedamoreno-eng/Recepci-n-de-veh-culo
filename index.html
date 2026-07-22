@@ -107,6 +107,7 @@
         <label>Código :</label>
         <select id="codigo">
             <option value="I - 151">I - 151</option>
+            <option value="I - 179">I - 179</option>
             <option value="I - 208">I - 208</option>
             <option value="I - 326">I - 326</option>
             <option value="I - 335">I - 335</option>
@@ -181,7 +182,7 @@
     <!-- Hora -->
     <div class="row">
         <label>Hora :</label>
-        <input type="tel" inputmode="numeric" id="hora1" maxlength="2" style="width: 40px;">
+        <input type="tel" inputmode="numeric" id="hora1" maxlength="2" style="width: 40px;" oninput="autoAvanzarHora(this)">
         <span>:</span>
         <input type="tel" inputmode="numeric" id="hora2" maxlength="2" style="width: 40px;">
         <span>hrs</span>
@@ -201,6 +202,7 @@
             <option value="90 %">90 %</option>
             <option value="80 %">80 %</option>
             <option value="70 %">70 %</option>
+            <option value="60 %">60 %</option>
             <option value="50 %">50 %</option>
             <option value="30 %">30 %</option>
             <option value="20 %">20 %</option>
@@ -221,6 +223,12 @@
 function autoAvanzarPpu(elemento) {
     if (elemento.value.length >= 4) {
         document.getElementById('ppu2').focus();
+    }
+}
+
+function autoAvanzarHora(elemento) {
+    if (elemento.value.length >= 2) {
+        document.getElementById('hora2').focus();
     }
 }
 
